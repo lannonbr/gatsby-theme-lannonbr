@@ -1,32 +1,8 @@
 import React from 'react'
-import styled, { createGlobalStyle } from 'styled-components'
+import styled from 'styled-components'
+import Header from './header'
 import Footer from './footer'
-
-const GlobalStyles = createGlobalStyle`
-  :root {
-    --headerFont: 'Oswald', Arial, Helvetica, sans-serif;
-    --bodyFont: 'Lato', Arial, Helvetica, sans-serif;
-
-    --purple: #663399;
-    --footerLink: #66339988;
-    --footerLinkHover: #663399dd;
-    --footerBackground: #66339906;
-    --blueLink: #2574a9;
-    --bodyTextColor: #404040;
-  }
-
-  body {
-    padding: 0;
-    margin: 0;
-    font-family: var(--bodyFont);
-
-  }
-
-
-  h1 {
-    font-family: var(--headerFont);
-  }
-`
+import GlobalStyles from '../utils/globalStyles'
 
 const LayoutContainer = styled.div`
   min-height: 100vh;
@@ -37,6 +13,14 @@ const LayoutContainer = styled.div`
     flex: 1 0 auto;
   }
 
+  header,
+  main {
+    padding: 20px 10px;
+    max-width: 1600px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
   footer {
     flex-shrink: 0;
   }
@@ -45,9 +29,7 @@ const LayoutContainer = styled.div`
 const Layout = ({ children }) => (
   <LayoutContainer>
     <GlobalStyles />
-    <header>
-      <h1 style={{ color: 'rebeccapurple' }}>Title</h1>
-    </header>
+    <Header />
     <main>{children}</main>
     <Footer />
   </LayoutContainer>

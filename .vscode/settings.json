@@ -1,3 +1,7 @@
 {
-  "git.ignoreLimitWarning": true
+  "git.ignoreLimitWarning": true,
+  "workbench.colorCustomizations": {
+    "titleBar.activeBackground": "#663399",
+    "titleBar.inactiveBackground": "#663399"
+  }
 }

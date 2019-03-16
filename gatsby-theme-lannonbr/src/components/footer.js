@@ -17,6 +17,10 @@ const StyledFooter = styled.footer`
     margin-right: 60px;
   }
 
+  div:last-child {
+    margin-right: 0;
+  }
+
   p {
     margin: 0;
   }

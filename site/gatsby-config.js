@@ -5,4 +5,8 @@ module.exports = {
       options: {},
     },
   ],
+  siteMetadata: {
+    title: 'Theme Test',
+    navigationLinks: [{ url: '/page2/', name: 'Page 2' }],
+  },
 }

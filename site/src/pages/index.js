@@ -8,8 +8,21 @@ const RedBox = styled.div`
 `
 
 export default () => (
-  <div>
+  <>
+    <h1>Pro</h1>
     Below this is a red square
     <RedBox />
-  </div>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo repellendus
+      natus vero facere voluptatem placeat et nisi minus explicabo. Possimus
+      iure laborum a natus iusto sint asperiores doloremque, aliquam assumenda.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi dolorem
+      repudiandae odio libero earum porro eum vitae repellat rem magni. Vitae
+      dignissimos sequi voluptate deserunt aliquid pariatur, consectetur
+      voluptatibus sit. Lorem ipsum, dolor sit amet consectetur adipisicing
+      elit. Magni at non autem fuga vitae facere, dolores nam voluptatibus ad
+      molestiae quis quas praesentium ex maiores quibusdam nulla dolorum vel
+      quasi.
+    </p>
+  </>
 )
