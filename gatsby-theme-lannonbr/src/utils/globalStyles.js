@@ -27,10 +27,13 @@ body {
   margin: 0;
   font-family: var(--bodyFont);
   color: var(--bodyTextColor);
+  font-weight: 400;
+  word-wrap: break-word;
+  font-kerning: normal;
+  font-feature-settings: "kern","liga","clig","calt";
 }
 
 body.dark {
-
   background: #404040;
   --bodyTextColor: #f0f0f0;
   --blueLink: #81cfe0;
@@ -38,11 +41,60 @@ body.dark {
   --footerLinkHover: #e4f1fe;
   --purple: var(--blueLink);
   --footerBackground: #81cfe020;
-
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--headerFont);
+}
+
+h1 {
+ font-size:2.25rem
+}
+h1,
+h2 {
+ padding:0;
+ margin:0 0 1.45rem;
+ color:inherit;
+ font-weight:700;
+ text-rendering:optimizeLegibility;
+ line-height:1.1
+}
+h2 {
+ font-size:1.62671rem
+}
+h3 {
+ font-size:1.38316rem
+}
+h3,
+h4 {
+ padding:0;
+ margin:0 0 1.45rem;
+ color:inherit;
+ font-weight:700;
+ text-rendering:optimizeLegibility;
+ line-height:1.1
+}
+h4 {
+ font-size:1rem
+}
+h5 {
+ font-size:.85028rem
+}
+h5,
+h6 {
+ padding:0;
+ margin:0 0 1.45rem;
+ color:inherit;
+ font-weight:700;
+ text-rendering:optimizeLegibility;
+ line-height:1.1
+}
+h6 {
+ font-size:.78405rem
+}
+
+img {
+  max-width: 100%;
 }
 `
 
