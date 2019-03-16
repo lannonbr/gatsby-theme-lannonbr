@@ -96,6 +96,15 @@ h6 {
 img {
   max-width: 100%;
 }
+
+li {
+  margin-bottom: .725rem;
+}
+
+p {
+  padding: 0;
+  margin: 0 0 1.45rem;
+}
 `
 
 export default GlobalStyles
