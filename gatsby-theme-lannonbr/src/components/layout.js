@@ -13,6 +13,11 @@ const LayoutContainer = styled.div`
     flex: 1 0 auto;
   }
 
+  main a {
+    color: var(--blueLink);
+    text-decoration: none;
+  }
+
   header,
   main {
     padding: 20px 10px;
