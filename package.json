@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-theme-workspaces",
+  "name": "gatsby-theme-lannonbr-workspaces",
   "version": "1.0.0",
   "private": true,
   "main": "index.js",
-  "author": "christopherbiscardi <chris@christopherbiscardi.com> (@chrisbiscardi)",
+  "author": "Benjamin Lannon <benjamin@lannonbr.com>",
   "license": "MIT",
   "workspaces": [
     "gatsby-theme-lannonbr",
