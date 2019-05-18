@@ -16,11 +16,5 @@ module.exports = {
         component: require.resolve('./src/components/layout.js'),
       },
     },
-    {
-      resolve: `gatsby-plugin-compile-es6-packages`,
-      options: {
-        modules: [`gatsby-theme-lannonbr`],
-      },
-    },
   ],
 }
