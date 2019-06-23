@@ -1,18 +1,18 @@
 {
   "name": "gatsby-theme-lannonbr",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "main": "index.js",
   "author": "Benjamin Lannon <benjamin@lannonbr.com> (@lannonbr)",
   "license": "MIT",
   "peerDependencies": {
-    "gatsby": "^2.5.0"
+    "gatsby": "^2.10.0"
   },
   "dependencies": {
-    "babel-plugin-styled-components": "^1.10.0",
+    "babel-plugin-styled-components": "^1.10.1",
     "gatsby-plugin-dark-mode": "^1.1.0",
-    "gatsby-plugin-layout": "^1.0.15",
-    "gatsby-plugin-styled-components": "^3.0.7",
+    "gatsby-plugin-layout": "^1.1.0",
+    "gatsby-plugin-styled-components": "^3.1.0",
     "gatsby-plugin-web-font-loader": "^1.0.4",
-    "styled-components": "^4.2.0"
+    "styled-components": "^4.3.2"
   }
 }

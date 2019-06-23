@@ -31,10 +31,10 @@ const LayoutContainer = styled.div`
   }
 `
 
-const Layout = ({ children }) => (
+const Layout = ({ location, children }) => (
   <LayoutContainer>
     <GlobalStyles />
-    <Header />
+    <Header location={location} />
     <main>{children}</main>
     <Footer />
   </LayoutContainer>

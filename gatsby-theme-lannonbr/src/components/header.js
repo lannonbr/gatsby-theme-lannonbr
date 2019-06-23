@@ -1,8 +1,17 @@
 import { Link, useStaticQuery, graphql } from 'gatsby'
-import React from 'react'
-import styled from 'styled-components'
-import Navigation from './Navigation'
+import React, { useState, useEffect } from 'react'
+import styled, { css } from 'styled-components'
 import { ThemeToggler } from 'gatsby-plugin-dark-mode'
+
+// Components
+import Navigation from './Navigation'
+import MobileNav from './MobileNav'
+
+// SVGs
+import MenuSVG from '../images/menu.svg'
+import MenuWhiteSVG from '../images/menu-white.svg'
+import MoonSVG from '../images/moon.svg'
+import SunSVG from '../images/sun.svg'
 
 const HeaderContainer = styled.div`
   display: flex;
@@ -12,27 +21,25 @@ const HeaderContainer = styled.div`
   @media (max-width: 768px) {
     padding-left: 10px;
     padding-right: 10px;
-    flex-direction: column;
     padding-bottom: 0;
-    align-items: flex-start;
   }
 `
 
 const NavWrapper = styled.div`
   display: flex;
-
-  label {
-    margin-left: 30px;
-  }
+  align-items: center;
 
   @media (max-width: 768px) {
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
+    display: none;
+  }
+`
 
-    label {
-      margin: 0;
-    }
+const MobileNavWrapper = styled.div`
+  display: none;
+
+  @media (max-width: 768px) {
+    display: flex;
+    align-items: flex-end;
   }
 `
 
@@ -44,7 +51,40 @@ const IndexLink = styled(Link)`
   align-items: center;
 `
 
-const Header = () => {
+const StyledButton = styled.button`
+  width: 50px;
+  height: 50px;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  color: gray;
+
+  ${props =>
+    props.navButton &&
+    css`
+      z-index: 2;
+      position: relative;
+    `};
+
+  ${props =>
+    props.open &&
+    css`
+      position: fixed;
+    `};
+`
+
+const Header = ({ location }) => {
+  const [mobileNavOpened, setMobileNavOpened] = useState(false)
+
+  useEffect(() => {
+    setMobileNavOpened(false)
+    if (window) {
+      window.scrollTo({ top: 0 })
+    }
+  }, [location])
+
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -72,17 +112,45 @@ const Header = () => {
             </h1>
             <NavWrapper>
               <Navigation />
-              <label>
-                <input
-                  type="checkbox"
-                  onChange={e =>
-                    toggleTheme(e.target.checked ? 'dark' : 'light')
-                  }
-                  checked={theme === 'dark'}
-                />{' '}
-                Dark mode
-              </label>
+              <StyledButton
+                onClick={() => toggleTheme(theme === 'dark' ? 'light' : 'dark')}
+              >
+                <img
+                  src={theme === 'dark' ? SunSVG : MoonSVG}
+                  alt="Dark mode toggler"
+                />
+              </StyledButton>
             </NavWrapper>
+            <MobileNavWrapper>
+              <MobileNav open={mobileNavOpened} />
+              <StyledButton
+                onClick={() => toggleTheme(theme === 'dark' ? 'light' : 'dark')}
+              >
+                <img
+                  src={theme === 'dark' ? SunSVG : MoonSVG}
+                  alt="Dark mode toggler"
+                />
+              </StyledButton>
+              <StyledButton
+                navButton={true}
+                open={mobileNavOpened}
+                onClick={() => {
+                  if (mobileNavOpened) {
+                    if (window) {
+                      window.scrollTo({ top: 0 })
+                    }
+                  }
+                  setMobileNavOpened(!mobileNavOpened)
+                }}
+              >
+                <img
+                  src={
+                    theme === 'dark' || mobileNavOpened ? MenuWhiteSVG : MenuSVG
+                  }
+                  alt="Open Mobile Navigation"
+                />
+              </StyledButton>
+            </MobileNavWrapper>
           </HeaderContainer>
         </header>
       )}

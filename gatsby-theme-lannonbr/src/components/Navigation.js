@@ -1,8 +1,11 @@
 import React from 'react'
-import { Link, useStaticQuery, graphql } from 'gatsby'
+import { Link } from 'gatsby'
 import styled from 'styled-components'
+import useNavigation from '../utils/useNavigation'
 
-const StyledNav = styled(Navigation)`
+const StyledNav = styled.nav`
+  margin-right: 30px;
+
   a {
     color: var(--bodyTextColor);
     text-decoration: none;
@@ -20,45 +23,20 @@ const StyledNav = styled(Navigation)`
   a.active {
     border-bottom-color: var(--purple);
   }
-
-  @media (max-width: 768px) {
-    width: 100%;
-    margin-top: 20px;
-    display: flex;
-
-    a {
-      flex: 1;
-      text-align: center;
-      margin-left: 0;
-      margin-bottom: 10px;
-    }
-  }
 `
 
-function Navigation({ className }) {
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          navigationLinks {
-            url
-            name
-          }
-        }
-      }
-    }
-  `)
-  let navLinks = data.site.siteMetadata.navigationLinks
+function Navigation() {
+  let navLinks = useNavigation()
 
   return (
-    <nav className={className}>
+    <StyledNav>
       {navLinks.map(link => (
         <Link key={link.name} to={link.url} activeClassName="active">
           {link.name}
         </Link>
       ))}
-    </nav>
+    </StyledNav>
   )
 }
 
-export default StyledNav
+export default Navigation
