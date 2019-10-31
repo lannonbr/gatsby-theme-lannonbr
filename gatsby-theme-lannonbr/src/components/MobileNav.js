@@ -17,7 +17,7 @@ const StyledNav = styled.nav`
       position: fixed;
       top: 0px;
       left: 0px;
-      background: var(--purple);
+      background: var(--primaryColor);
       z-index: 1;
       display: flex;
       flex-direction: column;

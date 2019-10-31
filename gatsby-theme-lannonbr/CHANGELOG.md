@@ -1,3 +1,8 @@
+# 2.0.0 - October 30, 2019
+
+- breaking: updated design tokens to have only discrete terms & no colors
+- chore: update dependencies
+
 # 1.2.0 - June 22, 2019
 
 Feat: Updated navbar to be toggleable fullscreen component on mobile layouts

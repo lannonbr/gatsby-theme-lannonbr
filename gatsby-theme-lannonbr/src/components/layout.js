@@ -14,7 +14,7 @@ const LayoutContainer = styled.div`
   }
 
   main a {
-    color: var(--blueLink);
+    color: var(--bodyLink);
     text-decoration: none;
   }
 

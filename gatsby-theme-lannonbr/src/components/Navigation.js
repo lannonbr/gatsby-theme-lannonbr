@@ -21,7 +21,7 @@ const StyledNav = styled.nav`
 
   a:hover,
   a.active {
-    border-bottom-color: var(--purple);
+    border-bottom-color: var(--primaryColor);
   }
 `
 

@@ -5,11 +5,11 @@ const GlobalStyles = createGlobalStyle`
   --headerFont: 'Oswald', Arial, Helvetica, sans-serif;
   --bodyFont: 'Lato', Arial, Helvetica, sans-serif;
 
-  --purple: #663399;
+  --primaryColor: #663399;
   --footerLink: #66339988;
   --footerLinkHover: #663399dd;
   --footerBackground: #66339906;
-  --blueLink: #2574a9;
+  --bodyLink: #2574a9;
   --bodyTextColor: #404040;
 }
 
@@ -36,10 +36,10 @@ body {
 body.dark {
   background: #404040;
   --bodyTextColor: #f0f0f0;
-  --blueLink: #81cfe0;
-  --footerLink: var(--blueLink);
+  --bodyLink: #81cfe0;
+  --footerLink: #81cfe0;
   --footerLinkHover: #e4f1fe;
-  --purple: var(--blueLink);
+  --primaryColor: #81cfe0;
   --footerBackground: #81cfe020;
 }
 

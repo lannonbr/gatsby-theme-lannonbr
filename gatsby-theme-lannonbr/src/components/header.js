@@ -45,7 +45,7 @@ const MobileNavWrapper = styled.div`
 
 const IndexLink = styled(Link)`
   height: 100%;
-  color: var(--purple);
+  color: var(--primaryColor);
   text-decoration: none;
   display: flex;
   align-items: center;
