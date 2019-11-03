@@ -8,6 +8,7 @@ const LayoutContainer = styled.div`
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 
   main {
     flex: 1 0 auto;

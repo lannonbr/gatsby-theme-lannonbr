@@ -1,3 +1,7 @@
+# 2.0.1 - October 30, 2019
+
+- chore: fix where page overflows on x axis
+
 # 2.0.0 - October 30, 2019
 
 - breaking: updated design tokens to have only discrete terms & no colors
