@@ -10,9 +10,9 @@
     "build": "gatsby build"
   },
   "dependencies": {
-    "gatsby": "^2.17.7",
-    "gatsby-theme-lannonbr": "^1.2.0",
-    "react": "^16.11.0",
-    "react-dom": "^16.11.0"
+    "gatsby": "^2.19.7",
+    "gatsby-theme-lannonbr": "^2.0.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
   }
 }

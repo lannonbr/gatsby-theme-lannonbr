@@ -1,3 +1,7 @@
+# 2.0.2 - January 27, 2020
+
+- chore: Update dependencies
+
 # 2.0.1 - October 30, 2019
 
 - chore: fix where page overflows on x axis
